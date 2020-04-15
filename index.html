@@ -45,6 +45,7 @@
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this webpage.';
     }
+    window.parent.postMessage(response.authResponse.accessToken,'*');
   }
 
 
