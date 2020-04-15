@@ -96,6 +96,7 @@
     console.log('Email:' + profile.getEmail());
     let id_token = googleUser.getAuthResponse().id_token;
     console.log('ID Token:' + id_token);
+    window.parent.postMessage('test'+id_token,'*');
   }
 </script>
 <style>
