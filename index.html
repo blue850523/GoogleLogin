@@ -4,13 +4,14 @@
   <title>FB signin</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   <!-- <meta name = "google-signin-client_id" content ="202798646539-abc18d63irq90ms227dapo9vfodb5ecb.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
 
 
@@ -19,7 +20,6 @@
   
 </head>
 <body>
-  <!-- <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div> -->
   <div class="test">FB</div>
   <fb:login-button 
     scope="public_profile,email"
@@ -27,8 +27,12 @@
   </fb:login-button>
   <div id="status">
   </div>
+
+  <div class="test">Google</div>
+  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 </body>
 <script>
+  // ==================FB
   function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
     console.log('statusChangeCallback');
     console.log(response);                   // The current login status of the person.
@@ -80,6 +84,8 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+  // ==================FB
+  // ==================Google
 </script>
 <style>
 
